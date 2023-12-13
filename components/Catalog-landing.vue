@@ -25,7 +25,7 @@ const products = ref([])
 
 const loadProducts = async () => {
     try {
-        const response = await fetch('http://185.244.51.158/doors/popular/?format=json')
+        const response = await fetch('http://185.244.51.158/doors/popular/')
         const data = await response.json()
         console.log(data)
         products.value = data
@@ -37,7 +37,6 @@ const loadProducts = async () => {
 onMounted(() => {
     loadProducts()
 })
-// const { data: products } = await useFetch('http://185.244.51.158/doors/popular/')
 </script>
 
 <style lang="scss">
